@@ -1,9 +1,9 @@
-import useAuth from "../auth/useAuth";
+import useAuthStore from "../auth/authStore";
 import useTasks from "./useTasks";
 
 const TaskList = () => {
   const { tasks, dispatch } = useTasks();
-  const { user } = useAuth();
+  const { user } = useAuthStore();
   return (
     <>
       <p>User: {user}</p>
@@ -36,4 +36,3 @@ const TaskList = () => {
 };
 
 export default TaskList;
-
