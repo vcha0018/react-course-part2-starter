@@ -50,7 +50,7 @@ const PostList = () => {
         Previous
       </button> */}
       <button
-        onClick={(e) => fetchNextPage()}
+        onClick={() => fetchNextPage()}
         disabled={isFetchingNextPage}
         className="btn btn-primary mt-2 ms-2">
         {isFetchingNextPage ? "Loading..." : "Load More"}

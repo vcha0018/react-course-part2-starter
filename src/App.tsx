@@ -1,12 +1,17 @@
 import "./App.css";
-import PostList from "./react-query/PostList";
+import HomePage from "./state-management/HomePage";
+import NavBar from "./state-management/NavBar";
+import { AuthProvider } from "./state-management/auth";
+import { TasksProvider } from "./state-management/tasks";
 
 function App() {
   return (
-    <>
-      {/* <TodoList /> */}
-      <PostList />
-    </>
+    <AuthProvider>
+      <TasksProvider>
+        <NavBar />
+        <HomePage />
+      </TasksProvider>
+    </AuthProvider>
   );
 }
 

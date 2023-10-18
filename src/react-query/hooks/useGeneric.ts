@@ -2,7 +2,7 @@ import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
 
 const useGeneric = <T>(
-  key: string,
+  key: unknown,
   endpoint: string,
   queryOptions?: { [key: string]: any }
 ) => {
